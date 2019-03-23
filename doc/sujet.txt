@@ -1,0 +1,182 @@
+L'objectif du TP2 de MN est d'implémenter une partie des fonctions BLAS,
+de mesurer les performances de ces fonctions BLAS en calculant les GFLOP/s
+(GigaFlops par seconde) des fonctions.
+
+Je vous demande de développer votre bibliothèque BLAS en respectant
+la structure de fichiers proposée (répertoires src, include, lib, examples, doc,...).
+Le répertoire doc contiendra votre rapport. Ce TP est à rendre pour le
+Vendredi 15/3/2019. L'archive de départ est en fichier attaché.
+
+Deux fichiers Makefile sont fournis, un premier  pour compiler votre bibliothèque
+dans le répertoire src et un second fichier Makefile pour compiler les programmes
+examples.
+
+Deux bibliothèques sont générées, une bibliithèque statique (libmnblas.a) et
+une bibliothèque dynamique (libmnblasdyn.o)
+
+Les fonctions de votre bibliothèque opéreront sur des vecteurs et
+matrices d'éléments en simple précision (float), double précision
+(double) et complexes simple précision et complexes double précision.
+Les fichiers complexe.h et complexe.c définissent les types complexe
+ainsi que des fonctions de calcul sur les nombres complexes. Vous
+pouvez compléter ces deux fichiers avec d'autres opérations.
+
+Il est fortement conseillé d'utiliser des boucles for pour implémenter
+les fonctions de cette bibliothèque. Ne pas utiliser des boucles
+while!  Cela facilitera les possibilités d'optimisation du TP3.
+
+En ce qui concerne les matrices, vous travaillerez sur des matrices
+pleines rangées par ligne (MNCblasRowMajor).
+
+Pour la documentation Intel, voici le lien vers la page Web
+
+https://software.intel.com/en-us/mkl-developer-reference-c-blas-routines
+
+1) Le répertoire src contient les fichiers source de vos fonctions
+BLAS. Un fichier Makefile est fourni avec les premières fonctions
+BLAS1. Vous compléterez ce fichier avec les nouvelles fonctions
+BLAS1, BLAS2 et BLAS3.
+
+2) Le répertoire include contient le fichier mnblas.h. Les premières
+fonctions BLAS 1 sont déclarées, les autres sont commentées.
+
+3) Le répertoire lib contient les librairies statique et
+dynamique. Elles sont générées après compilation des fichiers du
+répertoire src
+
+4) Le répertoire examples contiendra des exemples de programmes
+utilisant votre bibliothèque BLAS. Il est conseillé d'y placer
+plusieurs programmes d'exemples (un par fonction ou par type de
+fonction).
+
+5) Les fonctions BLAS opèrent sur des vecteurs ou des matrices de type
+float (simple précision) double (double précision), complexe simple
+précision et complexe double précision. Un nombre complexe est
+constitué de deux éléments (partie réelle, partie imaginaire). Le type
+complexe n'existe pas en C. Vous définirez les types complexes pour
+votre bibliothèque et pour les programmes utilisateurs.
+
+6) La bibliothèque BLAS et les fonctions sont décrites complètement sur le site Intel.
+https://software.intel.com/en-us/mkl-developer-reference-c-blas-routines
+
+7) BLAS 1
+
+swap
+copy
+dot
+axpy
+asum
+iamin
+iamax
+nrm2
+
+7) BLAS2
+
+gemv
+
+8) BLAS3
+
+gemm
+
+ 9) Analyse de performance
+
+Vous évaluerez les performances des différentes fonctions. Vous
+mesurerez les temps d'exécution en utilisant le compteur de cycle du
+processeur _rdtsc ().  Vous calculerez le nombre de FLOPS par seconde
+de vos fonctions. Le calcul des FLOPS par seconde sera effectué au
+niveau des programmes exemples.  Vous commenterez les résultats
+obtenus en comparant les fonctions avec les différents types de
+données et aussi en comparant les résultats obtenus sur les BLAS1,
+BLAS2 et BLAS3.
+
+L'objectif du TP2 de MN est d'implémenter une partie des fonctions BLAS,
+de mesurer les performances de ces fonctions BLAS en calculant les GFLOP/s
+(GigaFlops par seconde) des fonctions.
+
+Je vous demande de développer votre bibliothèque BLAS en respectant
+la structure de fichiers proposée (répertoires src, include, lib, examples, doc,...).
+Le répertoire doc contiendra votre rapport. Ce TP est à rendre pour le
+Vendredi 15/3/2019. L'archive de départ est en fichier attaché.
+
+Deux fichiers Makefile sont fournis, un premier  pour compiler votre bibliothèque
+dans le répertoire src et un second fichier Makefile pour compiler les programmes
+examples.
+
+Deux bibliothèques sont générées, une bibliithèque statique (libmnblas.a) et
+une bibliothèque dynamique (libmnblasdyn.o)
+
+Les fonctions de votre bibliothèque opéreront sur des vecteurs et matrices
+d'éléments en simple précision (float), double précision (double) et complexes
+simple précision et complexes double précision.  Les fichiers complexe.h et complexe.c
+définissent les types complexe ainsi que des fonctions de calcul sur les nombres
+complexes. Vous pouvez compléter ces deux fichiers avec d'autres opérations.
+
+Il est fortement conseillé d'utiliser des boucles for pour implémenter les
+fonctions de cette bibliothèque. Ne pas utiliser des boucles while!
+Cela facilitera les possibilités d'optimisation du TP3.
+
+En ce qui concerne les matrices, vous travaillerez sur des matrices pleines
+rangées par ligne (MNCblasRowMajor).
+
+Pour la documentation Intel, voici le lien vers la page Web
+
+https://software.intel.com/en-us/mkl-developer-reference-c-blas-routines
+
+1) Le répertoire src contient les fichiers source de vos fonctions
+BLAS. Un fichier Makefile est fourni avec les premières fonctions
+BLAS1. Vous compléterez ce fichier avec les nouvelles fonctions
+BLASS1, BLAS2 et BLAS3.
+
+2) Le répertoire include contient le fichier mnblas.h. Mes premières
+fonctions BLAS 1 sont déclarées, les autres sont commentées.
+
+3) Le répertoire lib contient les librairies statique et
+dynamique. Elles sont générées après compilation des fichiers du
+répertoire src
+
+4) Le répertoire examples contiendra des exemples de programmes
+utilisant votre bibliothèque BLAS. Il est conseillé d'y placer
+plusieurs programmes d'exemples (un par fonction ou par type de
+fonction).
+
+5) Les fonctions BLAS opèrent sur des vecteurs ou des matrices de type
+float (simple précision) double (double précision), complexe simple
+précision et complexe double précision. Un nombre complexe est
+constitué de deux éléments (partie réelle, partie imaginaire). Le type
+complexe n'existe pas en C. Vous définirez les types complexes pour
+votre bibliothèque et pour les programmes utilisateurs.
+
+6) La bibliothèque BLAS et les fonctions sont décrites complètement
+sur le site Intel.
+https://software.intel.com/en-us/mkl-developer-reference-c-blas-routines
+
+7) BLAS 1
+
+swap
+copy
+dot
+axpy
+asum
+iamin
+iamax
+nrm2
+
+7) BLAS2
+
+gemv
+
+8) BLAS3
+
+gemm
+
+ 9) Analyse de performance
+
+Vous évaluerez les performances des différentes fonctions. Vous
+mesurerez les temps d'exécution en utilisant le compteur de cycle du
+processeur _rdtsc ().  Vous calculerez le nombre de FLOPS par seconde
+de vos fonctions. Le calcul des FLOPS par seconde sera effectué au
+niveau des programmes exemples.  Vous commenterez les résultats
+obtenus en comparant les fonctions avec les différents types de
+données et aussi en comparant les résultats obtenus sur les BLAS1,
+BLAS2 et BLAS3.
+

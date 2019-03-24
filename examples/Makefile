@@ -49,7 +49,6 @@ test_gemv_dyn: test_gemv.o flop.o vec_mat.o
 test_gemv.o: test_gemv.c $(INC_DIR)/mnblas.h
 	gcc $(OPTIONS_COMPIL) -c test_gemv.c
 
-
 test_gemm:  test_gemm.o flop.o vec_mat.o $(LIB_DIR)/libmnblas.a
 	gcc -o test_gemm test_gemm.o flop.o vec_mat.o $(OPTIONS_LINK_STATIC)
 

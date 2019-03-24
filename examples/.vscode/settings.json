@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "vector.h": "c",
-        "vec_mat.h": "c",
-        "matrix.h": "c"
-    }
-}
